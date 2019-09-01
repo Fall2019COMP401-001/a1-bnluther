@@ -9,20 +9,21 @@ public class A1Novice {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
+		int numOfCustomers = scan.nextInt();
+		String[] output = new String[numOfCustomers];
 		
-		int num_customers = scan.nextInt();
-		String[] output = new String[num_customers];
-
-		for (int i = 0; i < num_customers; i++) {
-			String current_item_and_name = "";
-			String first_name = scan.next();
-			char first_initial = first_name.charAt(0);
-			current_item_and_name += first_initial + ". " + scan.next() + ": ";
+		
+//		retrieves customers' name
+		for (int i = 0; i < numOfCustomers; i++) {
+			String current = "";
+			String firstName = scan.next();
+			char firstInitial = firstName.charAt(0);
+			current += firstInitial + ". " + scan.next() + ": ";
 			
-			int num_items = scan.nextInt();
+			int num_of_items = scan.nextInt();
 			double sum = 0.0;
 			
-			for (int k = 0; k < num_items; k++) {
+			for (int k = 0; k < num_of_items; k++) {
 				double price = scan.nextDouble();
 				int quantity = scan.nextInt();
 				String item = scan.next();
@@ -31,9 +32,10 @@ public class A1Novice {
 				
 			}
 			
-			String item_to_string = String.format("%.2f", sum);
-			current_item_and_name += item_to_string;
-			output[i] = current_item_and_name;
+			String itemToString = String.format("%.2f", sum);
+			
+			current += itemToString;
+			output[i] = current;
 		}
 		for (int i = 0; i < output.length; i++) {
 		System.out.println(output[i]);		
