@@ -8,7 +8,6 @@ public class A1Adept {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
 		
 		int num_of_items = scan.nextInt();
 		String[] products = new String[num_of_items];

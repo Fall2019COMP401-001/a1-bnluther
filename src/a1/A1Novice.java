@@ -8,12 +8,10 @@ public class A1Novice {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
 		int numOfCustomers = scan.nextInt();
 		String[] output = new String[numOfCustomers];
 		
 		
-//		retrieves customers' name
 		for (int i = 0; i < numOfCustomers; i++) {
 			String current = "";
 			String firstName = scan.next();
